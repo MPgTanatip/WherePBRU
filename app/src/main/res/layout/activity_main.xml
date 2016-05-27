@@ -54,7 +54,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText"
-                android:layout_weight="2"
+                android:layout_weight="2.00"
                 android:hint="@string/SearchRoom" />
 
             <Button
@@ -63,7 +63,8 @@
                 android:text="SEARCH"
                 android:id="@+id/button3"
                 android:layout_weight="1"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:onClick="clickSearch" />
 
         </LinearLayout>
     </LinearLayout>
@@ -77,9 +78,10 @@
         android:layout_below="@+id/linearLayout2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/linearLayout2"
-        android:layout_alignStart="@+id/linearLayout2"
-        android:background="#78ffffff" />
+        android:background="#b4ffffff"
+        android:onClick="clickListBuild"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -90,7 +92,8 @@
         android:layout_below="@+id/button"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:background="#78ffffff" />
+        android:background="#b4ffffff"
+        android:onClick="clickAdmin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

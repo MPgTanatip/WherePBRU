@@ -13,12 +13,12 @@ public class Mymanage {
     private SQLiteDatabase sqLiteDatabase;
 
     public static final String room_table = "roomTABLE";
-    private static final String column_id = "id";
-    private static final String column_Build = "Build";
-    private static final String column_Room = "Room";
-    private static final String column_Lat = "Lat";
-    private static final String column_Lng = "Lng";
-    private static final String column_Icon = "Icon";
+    public static final String column_id = "_id";
+    public static final String column_Build = "Build";
+    public static final String column_Room = "Room";
+    public static final String column_Lat = "Lat";
+    public static final String column_Lng = "Lng";
+    public static final String column_Icon = "Icon";
 
     public Mymanage(Context context) {
 
