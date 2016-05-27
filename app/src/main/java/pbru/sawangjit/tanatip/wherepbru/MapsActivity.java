@@ -7,6 +7,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -14,6 +15,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private String[] resultStrings;
+    private int[] iconInts = {R.drawable.build1, R.drawable.build2,
+            R.drawable.build3, R.drawable.build4, R.drawable.build5,
+            R.drawable.build6,};
+
 
 
     @Override
@@ -47,5 +52,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng latLng = new LatLng(doulat, duuLng);
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16));
 
+        mMap.addMarker(new MarkerOptions()
+        .position(latLng)
+        .icon(BitmapDescriptorFactory
+        .fromResource(iconInts[Integer.parseInt(resultStrings[5])]))
+        .title("ห้อง " + resultStrings[2])
+        .snippet("อยู่ที่ อาคาร" + resultStrings[1]));
+
+
     }   //setup center
+
 }   //Mainclass
+
+
